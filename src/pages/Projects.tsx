@@ -1,8 +1,16 @@
+import projects from "../data/projects"
+import Projectcard from "../components/ProjectCard"
+
 const Projects = () => {
+  console.log(projects)
   return (
     <section>
-      <h1>Projects</h1>
-      <p>-- Aquí van las Cards de proyectos --</p>
+      <h2>Projects</h2>
+      {projects.map((project) => (
+        <Projectcard key={project.id} project={project}/>
+      ))}
+
+      {/* --Aquí va layout de Projects-- */}
     </section>
   );
 };
